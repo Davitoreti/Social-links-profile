@@ -1,0 +1,71 @@
+@import "colors/colors.scss";
+@import "common/common.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+    font-weight: $font-weight;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem;
+    background-color: $background-color;
+}
+
+.container{
+    @extend body;
+    width: 350px;
+    gap: 0.5rem;
+    border-radius: 0.7rem;
+    background-color: $container-color;
+    color: $text-color;
+
+    .picture{
+        img {
+            border-radius: 999px;
+            transform: scale(0.7);
+        }
+    }
+    
+    #name{
+        font-size: 1.8rem;
+        margin: 0rem 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #locality{
+        color: $locality-color;
+    }
+
+    #occupation{
+        font-weight: 400;
+        margin-top: 1rem;
+    }
+    
+    .list ul{
+        list-style-type: none;
+        margin-bottom: 2rem;
+    }
+
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    .item{
+        @extend body;
+        position: relative;
+        margin: 1rem;
+        width: 280px;
+        background-color: rgb(63, 61, 61);
+        padding: 0.8rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}
